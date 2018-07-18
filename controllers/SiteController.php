@@ -174,7 +174,7 @@ class SiteController extends Controller
         else{
             Yii::$app->getSession()->setFlash('warning','Failed!');
         }
-        return $this->redirect(['site/login']);
+        return $this->goHome();
     }
 
 
