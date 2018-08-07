@@ -1,9 +1,40 @@
 <?php
 use yii\helpers\Html;
 ?>
+<style>
+  .navbar-nav>.user-menu>.dropdown-menu {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 1px 0 0 0;
+    border-top-width: 0;
+    width: 141px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 155px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 15px;
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+</style>
 <header class="main-header">
         <!-- Logo -->
-        <?= Html::a('<span class="logo-mini">IoT</span><span class="logo-lg">' . "IoT Center" . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+        <?= Html::a('<span class="logo-mini">IoT</span><span class="logo-lg">' . "ArkIoT" . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -22,24 +53,12 @@ use yii\helpers\Html;
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
-                  <li class="user-header">
-                    <?= Html::img('@web/img/user2-160x160.jpg', ['class' => 'img-circle', 'alt'=>'User Image']) ?>
-                    <p>
-                    <?= Yii::$app->user->identity->fullname ?>
-                    </p>
-                  </li>
-                  <!-- Menu Footer-->
-                  <li class="user-footer">
-                    <!-- <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
-                    </div> -->
-                    <div class="pull-right">
-                        <?= Html::a(
+                  <li class="dropdown-item">
+                  <?= Html::a(
                             'Sign out',
                             ['/site/logout'],
-                            ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
+                            ['data-method' => 'post']
                         ) ?>
-                    </div>
                   </li>
                 </ul>
               </li>

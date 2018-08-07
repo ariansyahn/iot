@@ -15,8 +15,10 @@ use yii\helpers\Url;
                     'items' => [
                         ['label' => 'Menu', 'options' => ['class' => 'header']],
                         ['label' => 'Dashboard', 'icon' => 'fa fa-dashboard', 'url' => ['/site'] ],
+                        ['label' => 'Devices', 'icon' => 'fa fa-lightbulb-o', 'url' => ['/site'] ],
                         ['label' => 'System', 'options' => ['class' => 'header']],
                         ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii'],],
+                    
                         // ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug'],],
                     ],
                 ]

@@ -20,7 +20,9 @@
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
         "2amigos/yii2-ckeditor-widget": "*",
-        "kartik-v/yii2-dialog": "*"
+        "kartik-v/yii2-dialog": "*",
+        "deesoft/yii2-gii": "~1.0",
+        "miloschuman/yii2-highcharts-widget": "^6.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -57,6 +59,10 @@
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
         }
     }
 }
